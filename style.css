@@ -1,0 +1,76 @@
+*, *::before, *::after{
+    box-sizing: border-box;
+    font-family: Verdana, Geneva, Tahoma, sans-serif sans-serif;
+    font-weight: normal;
+}
+
+body{
+    background-image:url('https://images.pexels.com/photos/301717/pexels-photo-301717.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2');
+    background-repeat: no-repeat;
+    background-position: absolute;
+    background-attachment: fixed;
+    background-size: cover;
+    padding: 0;
+    margin: 0;
+}
+
+.cal-grid{
+    position: relative;
+    display: grid;
+    justify-content: center;
+    align-content: center;
+    min-height: 100vh;
+    grid-template-columns: repeat(4, 100px);
+    grid-template-rows: minmax(120px, auto) repeat(5, 100px);
+}
+
+.cal-grid > button{
+    color: white;
+    cursor: pointer;
+    font-size: 2rem;
+    border: 2px solid white;
+    outline:none;
+    background-color: rgb(159, 66, 29);
+
+}
+
+.cal-grid > button:hover{
+    background-color: lightsalmon;
+    border-radius: 10px;
+    border-color:chocolate;
+    color: black;
+}
+
+.span-two{
+    grid-column: span 2;
+}
+
+.output{
+    grid-column: 1 / -1;
+    background-color:rgba(65, 32, 1, 0.9);
+    border: 2px solid rgba(65, 1, 1, 0.9);
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    flex-direction: column;
+    padding: 10px;
+    word-wrap: break-word;
+    word-break: break-all;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.output .previous-operand{
+    padding: 5px;
+    color: rgba(234, 168, 113, 0.7);
+    font-size: 1.3rem;
+}
+
+.output .current-operand{
+    padding: 5px;
+    color: rgba(255,255,255, 0.7);
+    font-size: 2.5rem;
+}
+
+button.span-two{
+    background-color: rgb(99, 40, 8);
+}
